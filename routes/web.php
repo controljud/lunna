@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@index')->name('index');
+Route::get('/gallery', 'PageController@gallery')->name('gallery');
+Route::get('/services', 'PageController@gallery')->name('gallery');
+Route::get('/about', 'PageController@gallery')->name('gallery');
+Route::get('/elements', 'PageController@gallery')->name('gallery');
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
