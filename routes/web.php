@@ -15,9 +15,10 @@ Route::get('/', 'PageController@index')->name('index');
 Route::get('/gallery', 'PageController@gallery')->name('gallery');
 Route::get('/services', 'PageController@gallery')->name('gallery');
 Route::get('/about', 'PageController@gallery')->name('gallery');
-Route::get('/elements', 'PageController@gallery')->name('gallery');
-Route::get('/blog', 'PageController@gallery')->name('gallery');
-Route::get('/details', 'PageController@gallery')->name('gallery');
+Route::get('/marriage', 'PageController@gallery')->name('gallery');
+Route::get('/external', 'PageController@gallery')->name('gallery');
+Route::get('/studio', 'PageController@gallery')->name('gallery');
+Route::get('/newborn', 'PageController@gallery')->name('gallery');
 Route::get('/contact', 'PageController@gallery')->name('gallery');
 
 Auth::routes();

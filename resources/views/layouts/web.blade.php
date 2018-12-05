@@ -36,18 +36,17 @@
                 <ul class="nav navbar-nav menu_nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="{{asset('')}}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{asset('gallery')}}">Galeria</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{asset('services')}}">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{asset('about')}}">Sobre nós</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{asset('elements')}}">Elements</a></li>
                     <li class="nav-item submenu dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Serviços</a>
                         <ul class="dropdown-menu">
-                            <li class="nav-item"><a class="nav-link" href="{{asset('blog')}}">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{asset('details')}}">Blog Details</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{asset('marriage')}}">Casamentos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{asset('external')}}">Ensaios externos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{asset('studio')}}">Estúdio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{asset('newborn')}}">Newborn</a></li>
                         </ul>
                     </li>
-
-                    <li class="nav-item"><a class="nav-link" href="{{asset('contact')}}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{asset('about')}}">Sobre nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{asset('contact')}}">Contato</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item"><a href="#" class="search"><i class="lnr lnr-magnifier"></i></a></li>

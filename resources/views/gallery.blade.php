@@ -10,7 +10,7 @@
                     <li class="active" data-filter="*"><a href="#">Todas</a></li>
                     <li data-filter=".ap"><a href="#">Casamentos</a></li>
                     <li data-filter=".unp"><a href="#">Ensaios externos</a></li>
-                    <li data-filter=".unv"><a href="#">Ensaios estúdio</a></li>
+                    <li data-filter=".unv"><a href="#">Estúdio</a></li>
                     <li data-filter=".unv"><a href="#">Newborn</a></li>
                 </ul>
             </div>
