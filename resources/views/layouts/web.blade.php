@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="img/favicon.png" type="image/png">
-    <title>Bitmap Photography Multi</title>
+    <title>Lunnas Fotografia</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container box_1620">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+            <a class="navbar-brand logo_h" href="{{asset('')}}"><img src="img/logo.png" alt="" class="img-logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -35,19 +35,19 @@
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                 <ul class="nav navbar-nav menu_nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="{{asset('')}}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{asset('gallery')}}">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{asset('services')}}">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{asset('about')}}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{asset('gallery')}}">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{asset('services')}}">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{asset('about')}}">Sobre nós</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{asset('elements')}}">Elements</a></li>
                     <li class="nav-item submenu dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                         <ul class="dropdown-menu">
-                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{asset('blog')}}">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{asset('details')}}">Blog Details</a></li>
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{asset('contact')}}">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item"><a href="#" class="search"><i class="lnr lnr-magnifier"></i></a></li>
@@ -58,30 +58,13 @@
 </header>
 <!--================Header Menu Area =================-->
 
-<!--================Home Banner Area =================-->
-<section class="banner_area">
-    <div class="banner_inner d-flex align-items-center">
-        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-        <div class="container">
-            <div class="banner_content text-center">
-                <h2>Gallery</h2>
-                <div class="page_link">
-                    <a href="index.html">Home</a>
-                    <a href="gallery.html">Gallery</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--================End Home Banner Area =================-->
-
 @yield('content')
 
 <!--================Instagram Area =================-->
 <section class="instagram_area top_pad">
     <div class="container box_1620">
         <div class="insta_btn">
-            <a class="btn theme_btn" href="#">Follow us on instagram</a>
+            <a class="btn theme_btn" href="#">Nos siga no Instagram</a>
         </div>
         <div class="instagram_image row m0">
             <a href="#"><img src="img/instagram/ins-1.jpg" alt=""></a>
@@ -102,7 +85,7 @@
             <div class="col-lg-5 col-sm-6">
                 <aside class="f_widget ab_widget">
                     <div class="f_title">
-                        <h3>About Me</h3>
+                        <h3>Sobre nós</h3>
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore </p>
                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -130,7 +113,7 @@
             <div class="col-lg-2">
                 <aside class="f_widget social_widget">
                     <div class="f_title">
-                        <h3>Follow Me</h3>
+                        <h3>Nos siga</h3>
                     </div>
                     <p>Let us be social</p>
                     <ul class="list">

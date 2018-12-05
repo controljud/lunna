@@ -10,6 +10,9 @@ class PageController extends Controller {
     }
 
     public function gallery(){
-        return view('gallery');
+        $titulo = 'Galeria';
+
+        return view('gallery')
+            ->with('titulo', $titulo);
     }
 }

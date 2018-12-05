@@ -1,15 +1,17 @@
 @extends('layouts.web')
 
 @section('content')
+    @include('banner')
     <!--================Home Gallery Area =================-->
     <section class="home_gallery_area p_120">
         <div class="container">
             <div class="isotope_fillter">
                 <ul class="gallery_filter list">
-                    <li class="active" data-filter="*"><a href="#">All</a></li>
-                    <li data-filter=".ap"><a href="#">Approved</a></li>
-                    <li data-filter=".unp"><a href="#">Unapproved</a></li>
-                    <li data-filter=".unv"><a href="#">Unviewed</a></li>
+                    <li class="active" data-filter="*"><a href="#">Todas</a></li>
+                    <li data-filter=".ap"><a href="#">Casamentos</a></li>
+                    <li data-filter=".unp"><a href="#">Ensaios externos</a></li>
+                    <li data-filter=".unv"><a href="#">Ensaios estúdio</a></li>
+                    <li data-filter=".unv"><a href="#">Newborn</a></li>
                 </ul>
             </div>
         </div>
