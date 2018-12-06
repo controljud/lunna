@@ -15,4 +15,16 @@ class PageController extends Controller {
         return view('gallery')
             ->with('titulo', $titulo);
     }
+
+    public function category($id){
+
+    }
+
+    public function about(){
+
+    }
+
+    public function contact(){
+
+    }
 }
