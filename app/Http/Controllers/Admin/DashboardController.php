@@ -13,8 +13,10 @@ class DashboardController extends Controller{
 
     public function index(){
         $user = Auth::user();
+        $title = 'Dashboard';
 
         return view('admin.index')
-            ->with('user', $user);
+            ->with('user', $user)
+            ->with('title', $title);
     }
 }

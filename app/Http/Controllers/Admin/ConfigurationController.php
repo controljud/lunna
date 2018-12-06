@@ -13,8 +13,10 @@ class ConfigurationController extends Controller{
 
     public function index(){
         $user = Auth::user();
+        $title = 'Configuração';
 
         return view('admin.configuration.index')
-            ->with('user', $user);
+            ->with('user', $user)
+            ->with('title', $title);
     }
 }

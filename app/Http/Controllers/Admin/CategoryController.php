@@ -13,8 +13,10 @@ class CategoryController extends Controller{
 
     public function index(){
         $user = Auth::user();
+        $title = 'Categoria';
 
         return view('admin.category.index')
-            ->with('user', $user);
+            ->with('user', $user)
+            ->with('title', $title);
     }
 }

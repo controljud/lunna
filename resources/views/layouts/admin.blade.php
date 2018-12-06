@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lunnas Fotografia</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -182,6 +181,14 @@
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item">
+                        <a href="{{asset('admin')}}" class="nav-link">
+                            <i class="nav-icon fa fa-dashboard"></i>
+                            <p>
+                                Dashboard
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{asset('admin/events')}}" class="nav-link">
                             <i class="nav-icon fa fa-calendar-check-o"></i>
                             <p>
@@ -219,7 +226,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Dashboard</h1>
+                        <h1 class="m-0 text-dark">{{$title}}</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">

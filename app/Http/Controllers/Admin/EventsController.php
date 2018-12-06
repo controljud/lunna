@@ -13,8 +13,10 @@ class EventsController extends Controller{
 
     public function index(){
         $user = Auth::user();
+        $title = 'Eventos';
 
         return view('admin.events.index')
-            ->with('user', $user);
+            ->with('user', $user)
+            ->with('title', $title);
     }
 }

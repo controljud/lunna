@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href='{{asset("img/favicon.png")}}' type="image/png">
     <title>Lunnas Fotografia</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href='{{asset("css/bootstrap.css")}}'>
@@ -39,6 +39,7 @@
                     <li class="nav-item submenu dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Serviços</a>
                         <ul class="dropdown-menu">
+                            <!-- TODO - Retornar as categorias cadastradas -->
                             <li class="nav-item"><a class="nav-link" href="{{asset('marriage')}}">Casamentos</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{asset('external')}}">Ensaios externos</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{asset('studio')}}">Estúdio</a></li>
