@@ -1,4 +1,9 @@
 <!--================Home Banner Area =================-->
+<style>
+    .home_banner_area .banner_inner .overlay {
+        background: url({{asset($configuration->img_header_path)}}) no-repeat scroll center center;
+    }
+</style>
 <section class="home_banner_area">
     <div class="banner_inner d-flex align-items-center">
         <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>

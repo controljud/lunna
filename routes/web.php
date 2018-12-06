@@ -27,4 +27,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
 Route::get('/admin/events', 'Admin\EventsController@index')->name('admin.events');
 Route::get('/admin/category', 'Admin\CategoryController@index')->name('admin.category');
+
+//Configuration
 Route::get('/admin/configuration', 'Admin\ConfigurationController@index')->name('admin.configuration');
+Route::post('/admin/configuration/store', array('before' => 'csrf', 'Admin\ConfigurationController@store'))->name('admin.configuration.store');
