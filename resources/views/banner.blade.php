@@ -1,7 +1,7 @@
 <!--================Home Banner Area =================-->
 <style>
     .banner_area .banner_inner .overlay {
-        background: url({{asset($configuration->img_header_path)}}) no-repeat scroll top center;
+        background: url({{$banner}}) no-repeat scroll top center;
     }
 </style>
 <section class="banner_area">

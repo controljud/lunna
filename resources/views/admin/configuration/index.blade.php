@@ -3,7 +3,6 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <h4>Imagem Banner</h4>
             {!! Form::open(['action' => 'Admin\ConfigurationController@store', 'id' => 'form_configuration', 'enctype' => 'multipart/form-data']) !!}
                 <div class="row">
                     <div class="col-md-3">
@@ -22,14 +21,14 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="img-banner">Resolução recomendada: (1920 x 900)</label>
-                            <img src="{{asset($configuration->img_header_path)}}" id="img-banner" alt="..." class="img-fluid img-thumbnail rounded mx-auto d-block">
+                            <label for="img-banner">Banner - Resolução recomendada: (1920 x 900)</label>
+                            <img src="{{$image}}" id="img-banner" alt="..." class="img-fluid img-thumbnail rounded mx-auto d-block">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="img_header_path">Substituir</label>
-                            <input type="file" id="img_header_path" name="img_header_path" class="form-control"/>
+                            <label for="img_header">Substituir</label>
+                            <input type="file" id="img_header" name="img_header" class="form-control"/>
                         </div>
                     </div>
                 </div>
