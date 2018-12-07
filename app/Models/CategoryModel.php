@@ -9,6 +9,11 @@ class CategoryModel extends Model
 {
     protected $table = 'category';
 
+    protected $fillable = [
+        'title',
+        'description'
+    ];
+
     public function events(){
         return $this->hasMany(Events::class, 'category_id');
     }

@@ -26,43 +26,22 @@
     <link rel="stylesheet" href='{{asset("plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css")}}'>
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <style>
-        .img_logo{
-            width: 170px;
-        }
-        .message_dialer{
-            width: 400px;
-            position: absolute;
-            top: 20px;
-            left: 275px;
-            z-index: 1100;
-        }
-    </style>
-    <script>
-        $(document).ready(function(){
-            setTimeout(function(){
-                $('.message_dialer').hide();
-            }, 1000);
-        });
-    </script>
+    <link rel="stylesheet" href='{{asset("css/styles.css")}}'>
+    @yield('style_header')
 </head>
 <body class="hold-transition sidebar-mini">
 @if(session()->has('message'))
     <div class="card bg-{{session()->get('message')['type']}}-gradient message_dialer">
         <div class="card-header">
             <h3 class="card-title">{{session()->get('message')['title']}}</h3>
-
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-widget="remove"><i class="fa fa-times"></i>
                 </button>
             </div>
-            <!-- /.card-tools -->
         </div>
-        <!-- /.card-header -->
         <div class="card-body">
             {{session()->get('message')['message']}}
         </div>
-        <!-- /.card-body -->
     </div>
 @endif
 <div class="wrapper">
@@ -333,5 +312,7 @@
 <script src='{{asset("dist/js/pages/dashboard.js")}}'></script>
 <!-- AdminLTE for demo purposes -->
 <script src='{{asset("dist/js/demo.js")}}'></script>
+<script src='{{asset("js/scripts.js")}}'></script>
+@yield('script_footer')
 </body>
 </html>

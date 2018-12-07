@@ -37,7 +37,7 @@ class ConfigurationController extends Controller{
         //Image
         if (Input::file()) {
             $image = Input::file('img_header');
-            $name_banner = time() . '.' . $image->getClientOriginalExtension();
+            $name_banner = 'banner.' . $image->getClientOriginalExtension();
             $path = 'configuration/' . $name_banner;
             Input::file('img_header')->move(storage_path('configuration/'), $name_banner);
             $configuration->img_header_path = $path;

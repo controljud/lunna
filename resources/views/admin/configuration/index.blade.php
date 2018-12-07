@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
+@section('style_header')
+    <link rel="stylesheet" href='{{asset("css/configuration.css")}}'>
+@endsection
+
 @section('content')
     <div class="row">
         <div class="col-md-12">
@@ -8,13 +12,13 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="title">Título do site</label>
-                            <input type="text" class="form-control" id="title" name="title" value="{{$configuration->title}}"/>
+                            <input type="text" class="form-control" id="title" name="title" value="{{$configuration->title}}" required/>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="description">Descrição</label>
-                            <input type="text" class="form-control" id="description" name="description" value="{{$configuration->description}}"/>
+                            <input type="text" class="form-control" id="description" name="description" value="{{$configuration->description}}" required/>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,10 @@
+.img_logo{
+    width: 170px;
+}
+.message_dialer{
+    width: 400px;
+    position: absolute;
+    top: 20px;
+    left: 275px;
+    z-index: 1100;
+}
