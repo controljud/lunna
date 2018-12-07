@@ -30,10 +30,12 @@
                             <img src="{{$image}}" id="img-banner" alt="..." class="img-fluid img-thumbnail rounded mx-auto d-block">
                         </div>
                     </div>
+                </div>
+                <div class="row"></div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="img_header">Substituir</label>
-                            <input type="file" id="img_header" name="img_header" class="form-control"/>
+                            <input type="file" id="img_header" name="img_header" class="custom-file-input"/>
+                            <label class="custom-file-label" for="img_header">Arquivo de imagem</label>
                         </div>
                     </div>
                 </div>

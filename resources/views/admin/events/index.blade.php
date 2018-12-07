@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">
-                <a href="{{asset('admin/event/create')}}" class="btn btn-success btn-sm">Novo</a>
+                <a href="{{asset('admin/events/create')}}" class="btn btn-success btn-sm">Novo</a>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
                             <td>/ /</td>
                             <td>0</td>
                             <td>
-                                <a href="{{asset('admin/category/edit').'/'.$event->id}}" class="btn btn-light btn-sm" title="Editar">
+                                <a href="{{asset('admin/events/edit').'/'.$event->id}}" class="btn btn-light btn-sm" title="Editar">
                                     <i class="fa fa-edit"></i>
                                 </a>
                                 <a href="javascript:void(0)" class="btn btn-danger btn-sm" title="Excluir">
