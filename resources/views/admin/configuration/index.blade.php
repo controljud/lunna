@@ -4,18 +4,18 @@
     <div class="row">
         <div class="col-md-12">
             <h4>Imagem Banner</h4>
-            <form id="form-configuration" method="post" action="{{asset('admin/configuration/store')}}" enctype="multipart/form-data">
+            {!! Form::open(['action' => 'Admin\ConfigurationController@store', 'id' => 'form_configuration', 'enctype' => 'multipart/form-data']) !!}
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="title">Título do site</label>
-                            <input type="text" class="form-control" id="title" name="title" />
+                            <input type="text" class="form-control" id="title" name="title" value="{{$configuration->title}}"/>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="description">Descrição</label>
-                            <input type="text" class="form-control" id="description" name="description" />
+                            <input type="text" class="form-control" id="description" name="description" value="{{$configuration->description}}"/>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-            </form>
+            {!! Form::close() !!}
         </div>
     </div>
 @endsection

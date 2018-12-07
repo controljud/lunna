@@ -30,4 +30,4 @@ Route::get('/admin/category', 'Admin\CategoryController@index')->name('admin.cat
 
 //Configuration
 Route::get('/admin/configuration', 'Admin\ConfigurationController@index')->name('admin.configuration');
-Route::post('/admin/configuration/store', array('before' => 'csrf', 'Admin\ConfigurationController@store'))->name('admin.configuration.store');
+Route::post('/admin/configuration/store', 'Admin\ConfigurationController@store')->name('admin.configuration.store');

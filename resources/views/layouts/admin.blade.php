@@ -30,11 +30,42 @@
         .img_logo{
             width: 170px;
         }
+        .message_dialer{
+            width: 400px;
+            position: absolute;
+            top: 20px;
+            left: 275px;
+            z-index: 1100;
+        }
     </style>
+    <script>
+        $(document).ready(function(){
+            setTimeout(function(){
+                $('.message_dialer').hide();
+            }, 1000);
+        });
+    </script>
 </head>
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+@if(session()->has('message'))
+    <div class="card bg-{{session()->get('message')['type']}}-gradient message_dialer">
+        <div class="card-header">
+            <h3 class="card-title">{{session()->get('message')['title']}}</h3>
 
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-widget="remove"><i class="fa fa-times"></i>
+                </button>
+            </div>
+            <!-- /.card-tools -->
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            {{session()->get('message')['message']}}
+        </div>
+        <!-- /.card-body -->
+    </div>
+@endif
+<div class="wrapper">
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
         <!-- Left navbar links -->

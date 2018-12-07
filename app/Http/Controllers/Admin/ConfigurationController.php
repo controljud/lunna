@@ -27,9 +27,11 @@ class ConfigurationController extends Controller{
 
     public function store(Request $request){
         $configuration = ConfigurationModel::first();
+        $configuration->title = $request->title;
+        $configuration->description = $request->description;
 
         //Image
-        if($request->hasFile('img_header_path') && $request->file('img_header_path')->isValid()){
+        /*if($request->hasFile('img_header_path') && $request->file('img_header_path')->isValid()){
             $name = uniqid(date('HisYmd'));
             $extension = $request->image->extension();
             $nameFile = "{$name}.{$extension}";
@@ -42,8 +44,11 @@ class ConfigurationController extends Controller{
                     ->with('error', 'Falha ao fazer upload')
                     ->withInput();
             }
-        }
+        }*/
 
-        return redirect()->action('Admin\ConfigurationController@index');
+        $configuration->save();
+
+        return redirect()->action('Admin\ConfigurationController@index')
+            ->with('message', ['type' => 'success', 'title' => 'Sucesso', 'message' => 'Configuração salva com sucesso']);
     }
 }
