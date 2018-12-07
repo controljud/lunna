@@ -25,7 +25,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
+
+//Events
 Route::get('/admin/events', 'Admin\EventsController@index')->name('admin.events');
+Route::get('/admin/events/create', 'Admin\EventsController@create')->name('admin.events.create');
+Route::get('/admin/events/edit/{id}', 'Admin\EventsController@edit')->name('admin.events.edit');
+Route::post('/admin/events/store', 'Admin\EventsController@store')->name('admin.events.store');
 
 //Category
 Route::get('/admin/category', 'Admin\CategoryController@index')->name('admin.category');

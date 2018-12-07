@@ -19,7 +19,7 @@ class CategoryController extends Controller{
 
     public function index(){
         $user = Auth::user();
-        $categories = CategoryModel::orderBy('title', 'asc')->get();
+        $categories = CategoryModel::orderBy('title', 'asc')->paginate(15);
 
         return view('admin.category.index', $this->data)
             ->with('categories', $categories)

@@ -7,6 +7,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
+            <div class="card card_normal">
             {!! Form::open(['action' => 'Admin\ConfigurationController@store', 'id' => 'form_configuration', 'enctype' => 'multipart/form-data']) !!}
                 <div class="row">
                     <div class="col-md-3">
@@ -44,6 +45,7 @@
                     </div>
                 </div>
             {!! Form::close() !!}
+            </div>
         </div>
     </div>
 @endsection
