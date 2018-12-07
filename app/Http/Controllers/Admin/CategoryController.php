@@ -13,23 +13,33 @@ class CategoryController extends Controller{
     public function __construct(){
         $this->middleware('auth');
         $this->data = [
-            'user' => Auth::user(),
             'title' => 'Categorias'
         ];
     }
 
     public function index(){
+        $user = Auth::user();
         $categories = CategoryModel::orderBy('title', 'asc')->get();
 
         return view('admin.category.index', $this->data)
-            ->with('categories', $categories);
+            ->with('categories', $categories)
+            ->with('user', $user);
+    }
+
+    public function create(){
+        $user = Auth::user();
+
+        return view('admin.category.edit', $this->data)
+            ->with('user', $user);
     }
 
     public function edit($id){
+        $user = Auth::user();
         $category = CategoryModel::find($id);
 
         return view('admin.category.edit', $this->data)
-            ->with('category', $category);
+            ->with('category', $category)
+            ->with('user', $user);
     }
 
     public function store(Request $request){

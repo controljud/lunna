@@ -29,6 +29,7 @@ Route::get('/admin/events', 'Admin\EventsController@index')->name('admin.events'
 
 //Category
 Route::get('/admin/category', 'Admin\CategoryController@index')->name('admin.category');
+Route::get('/admin/category/create', 'Admin\CategoryController@create')->name('admin.category.create');
 Route::get('/admin/category/edit/{id}', 'Admin\CategoryController@edit')->name('admin.category.edit');
 Route::post('/admin/category/store', 'Admin\CategoryController@store')->name('admin.category.store');
 
