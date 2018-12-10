@@ -40,7 +40,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Serviços</a>
                         <ul class="dropdown-menu">
                             @foreach($categories as $category)
-                            <li class="nav-item"><a class="nav-link" href="{{asset('service').'/'.$category->id}}">{{$category->title}}</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{asset('category').'/'.$category->id}}">{{$category->title}}</a></li>
                             @endforeach
                         </ul>
                     </li>

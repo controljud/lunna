@@ -27,7 +27,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="img-banner">Banner - Resolução recomendada: (1920 x 900)</label>
-                            <img src="{{$image}}" id="img-banner" alt="..." class="img-fluid img-thumbnail rounded mx-auto d-block">
+                            <img src="{{asset('img/banner/banner.jpg')}}" id="img_banner" alt="..." class="img-fluid img-thumbnail rounded mx-auto d-block">
                         </div>
                     </div>
                 </div>
@@ -50,4 +50,8 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('script_footer')
+    <script src='{{asset("js/admin/configuration.js")}}'></script>
 @endsection

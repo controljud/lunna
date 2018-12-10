@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\ConfigurationModel as Configuration;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image;
 use Imagick;
 use Auth;
 
@@ -37,10 +39,28 @@ class ConfigurationController extends Controller{
         //Image
         if (Input::file()) {
             $image = Input::file('img_header');
-            $name_banner = 'banner.' . $image->getClientOriginalExtension();
-            $path = 'configuration/' . $name_banner;
-            Input::file('img_header')->move(storage_path('configuration/'), $name_banner);
-            $configuration->img_header_path = $path;
+            $file = $image;
+            $extension = $image->getClientOriginalExtension();
+            $destinationPath = public_path('img/banner/');
+            $fileName = 'banner.'.$extension;
+
+            $fullPath = $destinationPath.$fileName;
+
+            if(!file_exists($destinationPath)){
+                File::makeDirectory($destinationPath, 0775);
+            }
+
+            $image = Image::make($file)
+                ->resize(1920, null, function($constraint){
+                    $constraint->aspectRatio();
+                })->encode('jpg');
+
+            $image->save($fullPath, 100);
+
+            //Salvar na pasta storage
+            //$path = 'configuration/' . $name_banner;
+            //Input::file('img_header')->move(storage_path('configuration/'), $name_banner);
+            $configuration->img_header_path = $fullPath;
         }
 
         $configuration->save();
@@ -49,6 +69,7 @@ class ConfigurationController extends Controller{
             ->with('message', ['type' => 'success', 'title' => 'Sucesso', 'message' => 'Configuração salva com sucesso']);
     }
 
+    //Retorna Imagem da pasta storage
     private function prepararImagem($arquivo){
         if (file_exists($arquivo)) {
             $imagick = new Imagick($arquivo);

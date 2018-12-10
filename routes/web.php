@@ -13,12 +13,8 @@
 
 Route::get('/', 'PageController@index')->name('index');
 Route::get('/gallery', 'PageController@gallery')->name('gallery');
-Route::get('/service/{id}', 'PageController@gallery')->name('gallery');
+Route::get('/category/{id}', 'PageController@category')->name('gallery');
 Route::get('/about', 'PageController@gallery')->name('gallery');
-Route::get('/marriage', 'PageController@gallery')->name('gallery');
-Route::get('/external', 'PageController@gallery')->name('gallery');
-Route::get('/studio', 'PageController@gallery')->name('gallery');
-Route::get('/newborn', 'PageController@gallery')->name('gallery');
 Route::get('/contact', 'PageController@gallery')->name('gallery');
 
 Auth::routes();
