@@ -216,6 +216,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{asset('admin/schedule')}}" class="nav-link">
+                            <i class="nav-icon fa fa-calendar"></i>
+                            <p>
+                                Agenda
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{asset('admin/configuration')}}" class="nav-link">
                             <i class="nav-icon fa fa-cog"></i>
                             <p>

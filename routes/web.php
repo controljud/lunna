@@ -22,6 +22,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
 
+//Schedule
+Route::get('/admin/schedule', 'Admin\ScheduleController@index')->name('schedule.index');
+Route::get('/admin/schedule/create', 'Admin\ScheduleController@create')->name('schedule.create');
+
 //Events
 Route::get('/admin/events', 'Admin\EventsController@index')->name('admin.events');
 Route::get('/admin/events/create', 'Admin\EventsController@create')->name('admin.events.create');
