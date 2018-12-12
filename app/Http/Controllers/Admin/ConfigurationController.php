@@ -55,7 +55,7 @@ class ConfigurationController extends Controller{
                     $constraint->aspectRatio();
                 })->encode('jpg');
 
-            $image->save($fullPath, 100);
+            $image->save($fullPath, 85);
 
             //Salvar na pasta storage
             //$path = 'configuration/' . $name_banner;

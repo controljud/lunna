@@ -1,0 +1,21 @@
+.imgp{
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.dvImgP{
+    float: left;
+    margin: 10px;
+    padding: 4px;
+    position: relative;
+    width: 22%;
+    border: 1px solid #cdcdcd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.sairDvImg{
+    position: absolute;
+    left: -3px;
+    top: -3px;
+}
